@@ -1,0 +1,18 @@
+
+
+<section class="mb-3">
+  <h2 class="text-center">RestCountries API</h2>
+  <div class="d-flex justify-content-center align-items-center">
+    <ul class="nav">
+      <li class="nav-item text-center" *ngFor="let item of reactiveMenu">
+        <a
+          class="nav-link"
+          [routerLink]="[item.route]"
+          routerLinkActive="active"
+        >
+          {{ item.title }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

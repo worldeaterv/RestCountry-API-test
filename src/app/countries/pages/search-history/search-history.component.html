@@ -1,0 +1,22 @@
+<h4>Historial de búsquedas</h4>
+<hr />
+
+<div
+  *ngIf="getHistory().length === 0; else history"
+  class="alert alert-danger text-center"
+>
+  No hay historial aún...
+</div>
+
+<ng-template #history>
+  <div class="row animate__animated animate__fadeIn">
+    <div class="col">
+      <ul>
+        <li *ngFor="let url of getHistory()">
+          <a [href]="url" target="_blank">{{ url }}</a>
+          <hr />
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-template>

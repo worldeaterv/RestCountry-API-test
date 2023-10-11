@@ -1,0 +1,19 @@
+<h4>Por País</h4>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- SearchBox -->
+    <app-search-input
+      (onValue)="searchByCountryName($event)"
+      placeholder="Buscar por país"
+    ></app-search-input>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr />
+    <app-country-view [countries]="countries"></app-country-view>
+  </div>
+</div>
